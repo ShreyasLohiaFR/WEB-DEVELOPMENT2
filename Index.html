@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration
+    </title>
+    <link rel="icon" type="images/x-icon" href="NITW LOGO.png">
+</head>
+
+<body style="background-color:rgb(162, 197, 204)">
+
+    <center>
+    <a href="https://www.nitw.ac.in/" target="_self"><img src="nitw.png" alt="NITW Logo"></a>
+    <a href="Timetable.html"><img src="timetable.png" alt="Search Icon" width="40" height="40"></a>
+    <hr>
+    <marquee behavior="scroll" direction="left" scrollamount="10">National Institute of Technology Warangal, formerly known as Regional Engineering College, was established in 1959. Pandit Jawaharlal Nehru laid the foundation stone for this institute on October 10, 1959, the first in the chain of 31 NITs (formerly known as RECs) in the country.</marquee>
+    <hr>
+    <h1>Registration Form &#128511;</h1>
+    <form id="myForm">
+        <input type="text" name="Firstname" placeholder="First Name">
+        <input type="text" name="Middlename" placeholder="Middle Name"><br><br>
+        <input type="text" name="Lastname" placeholder="Last Name">
+        <input type="text" name="Email" placeholder="Email Address"><br><br>
+        <input type="number" name="Mobileno" placeholder="Mobile No."><br><br>
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dobb"><br>
+        <p>Select Gender:</p>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label><br><br>
+        Address:<br>
+        <input type="text" name="address" placeholder="Address"><br>
+        <p>Your Fav Subject:</p>
+        <input type="checkbox" id="p" name="physics">
+        <label for="p">Physics</label>
+        <input type="checkbox" id="c" name="chemistry">
+        <label for="c">Chemistry</label>
+        <input type="checkbox" id="m" name="maths">
+        <label for="m">Maths</label><br><br>
+        CGPA:<br>
+        <input type="number" name="cgpa" placeholder="CGPA"><br>
+        <p>Choose a Course:</p>
+        <select name="Dropdown">
+        <option value="Machine Learning" selected>Machine Learning</option>
+        <option value="Deep Learning" selected>Deep Learning</option>
+        <option value="DSA" selected>DSA</option>
+        <option value="Select One" selected>Select One</option>
+        </select><br><br>
+        <script>
+            function showConfirm() 
+            {
+                var useresponse = confirm("Are you sure you want to proceed ?");
+                if (useresponse) 
+                {
+                    alert("You pressed OK !");
+                } 
+                else 
+                {
+                    alert("You pressed Cancel !");
+                    return;
+                }
+            }
+        </script>
+        <script>
+            function confirmReset()
+            {
+              var confirmation = confirm("Are you sure you want to reset the form ?");
+              if (confirmation) 
+              {
+                document.getElementById("myForm").reset();
+              }
+            }
+        </script>
+        <script>
+            function alerting()
+            {
+                alert("Go back to School !")
+            }
+        </script>
+        <script>
+            let attemptCount = 0;         
+            function promting(event) 
+            {
+              event.preventDefault();         
+              let password = prompt("Please enter the password");
+              let text;        
+              if (password == "123456") 
+              {
+                alert("Correct Password!");
+              } 
+              else 
+              {
+                attemptCount++;
+                alert("Wrong Password!");
+        
+                if (attemptCount >= 3) 
+                {
+                  alert("Wrong password entered 3 times. The page will now self-destruct.");
+                  window.location.href = "https://www.webpagetest.org/blank.html";
+                }
+              }
+            }
+        </script>
+        <button onclick="alerting()">How To</button>
+        <button onclick="promting(event)">Password</button>
+        <button type="button" onclick="confirmReset()">Reset</button>
+        <button type="submit" onclick="showConfirm()">Submit</button>
+    </form>
+    <hr>
+    <details>
+    <summary>Vision of NITW</summary>
+    Towards a Global Knowledge Hub, striving continuously in pursuit of excellence in Education, Research, Entrepreneurship and Technological services to the society
+    </details>
+    </center>
+
+</body>
+</html>
